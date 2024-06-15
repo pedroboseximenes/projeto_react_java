@@ -1,0 +1,44 @@
+CREATE TABLE dev_web.Voo (
+  id INT NOT NULL AUTO_INCREMENT,
+  destino VARCHAR(30)  NULL,
+  origem VARCHAR(30)  NULL,
+  data_viagem DATE DEFAULT NULL,
+  empresa VARCHAR(30)  NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB
+CHARACTER SET utf8mb4;
+
+CREATE TABLE dev_web.Passagem (
+  id INT NOT NULL AUTO_INCREMENT,
+  preco DECIMAL(8, 2) NOT NULL,
+  data_compra DATE NOT NULL,
+  assento VARCHAR(30)  NULL,
+  voo_id INT NOT NULL,
+  PRIMARY KEY (id),
+	FOREIGN KEY(voo_id) REFERENCES Voo(id)
+)
+ENGINE = INNODB
+CHARACTER SET utf8mb4;
+
+
+CREATE TABLE dev_web.Carrinho(
+id INT NOT NULL AUTO_INCREMENT,
+data_criacao DATE NOT NULL,
+primary key(id)
+
+);
+
+CREATE Table dev_web.Item_carrinho(
+id INT NOT NULL AUTO_INCREMENT,
+quantidade INT NOT NULL,
+passagem_id INT REFERENCES Passagem(id) ON DELETE CASCADE,
+carrinho_id INT REFERENCES Carrinho(id) ON DELETE CASCADE,
+PRIMARY KEY(id)
+);
+
+SELECT * FROM voo;
+Select * FROM Passagem p;
+
+SELECT * FROM carrinho;
+SELECT * from item_Carrinho;

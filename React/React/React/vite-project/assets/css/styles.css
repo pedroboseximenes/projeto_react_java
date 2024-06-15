@@ -1,0 +1,72 @@
+.bgimage{
+    background-image: url("../images/panoramica1.jpg");
+    background-size: cover;
+    height: 420px;
+    background-position: center;
+    
+}
+
+.media img {
+    max-width: 180px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    border-radius: 6%;
+}
+
+@media (max-width:480px){
+
+    .media img {
+        max-width: 90px;
+        margin-bottom: 6px;
+        
+        border-radius: 50%;
+    }
+    .media-body h5{
+        font-size: 16px;
+        margin-top: 18px;
+    }
+
+    .texto-media-body{
+        display:none;
+    }
+}
+
+
+.footer {
+    background-color: #333;
+    color: #efefef;
+    padding: 30px 0;
+}
+
+.footer a {
+    color: #639bcf;
+
+}
+
+.footer a:hover {
+    color: #d8e6f3;
+
+}
+
+.text-1{
+    font-size: 35px;
+}
+
+.text-2{
+    font-size: 30px;
+}
+
+@media(max-width:1100px){
+    
+.text-1{
+    font-size: 30px;
+}
+
+.text-2{
+    font-size: 25px;
+}
+}
+
+a:hover i { transform: scale(1.35);}
+ i:hover { transform: scale(2.35); }
+
